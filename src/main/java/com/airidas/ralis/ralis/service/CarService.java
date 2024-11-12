@@ -33,6 +33,7 @@ public class CarService {
         }
     }
 
+
     public List<Masina> getAllCars() {
         return masinuSarasas;
     }

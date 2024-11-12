@@ -14,7 +14,7 @@ import com.airidas.ralis.ralis.model.Masina;
 import com.airidas.ralis.ralis.service.CarService;
 
 @Controller
-@RequestMapping("/cars")
+@RequestMapping("/masinos")
 public class CarController {
 
     @Autowired
@@ -26,18 +26,18 @@ public class CarController {
         return "car-list";
     }
 
-    @GetMapping("/average-volume")
+    @GetMapping("/vidutinis-turis")
     public String showAverageVolume(Model model) {
         model.addAttribute("averageVolume", carService.calculateAverageVolume());
         return "average-volume";
     }
 
-    @GetMapping("/search")
+    @GetMapping("/paeiska")
     public String searchForm() {
         return "search-form";
     }
 
-    @PostMapping("/search")
+    @PostMapping("/paieska")
     public String searchByMakeAndModel(@RequestParam String make, @RequestParam String model, Model modelAttr) {
         List<Masina> results = carService.searchByMakeAndModel(make, model);
         modelAttr.addAttribute("cars", results);
