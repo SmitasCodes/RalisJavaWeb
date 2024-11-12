@@ -10,12 +10,14 @@
       <h2>Mašinų paieška</h2>
       <div class="main-color-spacing">
         <form action="/masinos/paieska" method="post">
-          <label for="make">Markė:</label>
-          <input type="text" id="make" name="make" />
-          <br />
-          <label for="model">Modelis:</label>
-          <input type="text" id="model" name="model" />
-          <br />
+          <div class="input-div">
+            <label for="make">Markė:</label>
+            <input type="text" id="make" name="make" />
+          </div>
+          <div class="input-div">
+            <label for="model">Modelis:</label>
+            <input type="text" id="model" name="model" />
+          </div>
           <div class="buttons search-buttons">
             <button type="submit">Ieškoti</button>
           </div>

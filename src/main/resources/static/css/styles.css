@@ -58,6 +58,7 @@ ul li {
 }
 
 .buttons.search-buttons {
+  clear: both;
   padding: 10px 0 0 0;
 }
 
@@ -69,4 +70,12 @@ ul li {
   cursor: pointer;
 }
 
+.input-div {
+  display: block;
+  padding-top: 10px;
+}
 
+.input-div input {
+  width: 95px;
+  float: right;
+}
