@@ -61,4 +61,10 @@ public class CarService {
                         .thenComparing(Masina::getMarke))
                 .collect(Collectors.toList());
     }
+
+    public List<Masina> getCarsRankedByBrand() {
+        return masinuSarasas.stream()
+                .sorted(Comparator.comparing(Masina::getMarke))
+                .collect(Collectors.toList());
+    }
 }

@@ -50,4 +50,11 @@ public class CarController {
         model.addAttribute("carsSortedBySpeed", rankedCars);
         return "car-list-sorted-speed";
     }
+
+    @GetMapping("/isrikiavimas-pagal-marke")
+    public String getAllCarsRankedByBrand(Model model) {
+        List<Masina> rankedCars = carService.getCarsRankedByBrand();
+        model.addAttribute("carsSortedByBrand", rankedCars);
+        return "car-list-sorted-brand";
+    }
 }

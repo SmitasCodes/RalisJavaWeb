@@ -7,9 +7,9 @@
   </head>
   <body>
     <div class="main">
-      <h2>Mašinos išrikiuotos pagal greitį</h2>
+      <h2>Mašinos išrikiuotos pagal marke</h2>
       <ol>
-        <li th:each="car : ${carsSortedBySpeed}">
+        <li th:each="car : ${carsSortedByBrand}">
           <span
             th:text="${car.marke} + ' ' + ${car.modelis} + ', ' + ${car.turis} + 'L, ' + ${car.maxGreitis} + ' km/h'"
           ></span>
