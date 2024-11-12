@@ -13,7 +13,7 @@ import com.airidas.ralis.ralis.model.Masina;
 
 @Service
 public class CarService {
-    private List<Masina> masinuSarasas = new ArrayList<>();
+    private final List<Masina> masinuSarasas = new ArrayList<>();
 
     public CarService() {
         loadCarsFromFile();
@@ -33,13 +33,13 @@ public class CarService {
         }
     }
 
-
     public List<Masina> getAllCars() {
         return masinuSarasas;
     }
 
-    public double calculateAverageVolume() {
-        return masinuSarasas.stream().mapToDouble(Masina::getTuris).average().orElse(0);
+    public String calculateAverageVolume() {
+        double average = masinuSarasas.stream().mapToDouble(Masina::getTuris).average().orElse(0);
+        return String.format("%.2f", average);
     }
 
     public List<Masina> searchByMakeAndModel(String make, String model) {

@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html,body {
+html,
+body {
   background-color: #baf6f8;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   padding: 10px;
@@ -23,6 +24,12 @@ h2 {
   text-align: center;
 }
 
+.main-color-spacing {
+  background-color: #3dd4da;
+  border-radius: 20px;
+  padding: 10px;
+}
+
 ul {
   padding: 10px 0;
   background-color: #3dd4da;
@@ -36,16 +43,30 @@ ul li {
 }
 
 .buttons {
-  display:flex;
+  display: flex;
   justify-content: space-around;
   padding: 10px 0;
 }
 
 .buttons a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 4px 6px;
-    border-radius: 10px;
-    background-color: #32cd32;
-    font-size: 0.9em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 6px;
+  border-radius: 10px;
+  background-color: #32cd32;
+  font-size: 0.9em;
 }
+
+.buttons.search-buttons {
+  padding: 10px 0 0 0;
+}
+
+.search-buttons button {
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: none;
+  background: #258e92;
+  cursor: pointer;
+}
+
+

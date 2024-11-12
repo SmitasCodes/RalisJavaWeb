@@ -2,20 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Search Cars</title>
-    <link rel="stylesheet" href="/static/css/styles.css" />
+    <title>Mašinų paieška</title>
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <h2>Search for Cars</h2>
-    <form action="/masinos/paieska" method="post">
-      <label for="make">Make:</label>
-      <input type="text" id="make" name="make" />
-      <br />
-      <label for="model">Model:</label>
-      <input type="text" id="model" name="model" />
-      <br />
-      <button type="submit">Search</button>
-    </form>
-    <a href="/masinos">Back to Car List</a>
+    <div class="main">
+      <h2>Mašinų paieška</h2>
+      <div class="main-color-spacing">
+        <form action="/masinos/paieska" method="post">
+          <label for="make">Markė:</label>
+          <input type="text" id="make" name="make" />
+          <br />
+          <label for="model">Modelis:</label>
+          <input type="text" id="model" name="model" />
+          <br />
+          <div class="buttons search-buttons">
+            <button type="submit">Ieškoti</button>
+          </div>
+        </form>
+      </div>
+      <div class="buttons">
+        <a href="/masinos">Sugrįžti į mašinų saraša</a>
+      </div>
+    </div>
   </body>
 </html>
