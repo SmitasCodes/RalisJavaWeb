@@ -13,7 +13,6 @@ public class Masina {
         this.maxGreitis = maxGreitis;
     }
 
-    // Getters and setters
     public String getMarke() {
         return marke;
     }
