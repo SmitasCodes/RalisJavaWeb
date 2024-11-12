@@ -32,7 +32,7 @@ public class CarController {
         return "average-volume";
     }
 
-    @GetMapping("/paeiska")
+    @GetMapping("/paieska")
     public String searchForm() {
         return "search-form";
     }

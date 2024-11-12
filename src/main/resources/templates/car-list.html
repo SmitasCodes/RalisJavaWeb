@@ -3,17 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <title>Mašinos</title>
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <h2>Mašinų sarašas:</h2>
-    <ul>
-      <li th:each="car : ${cars}">
-        <span
-          th:text="${car.marke} + ' ' + ${car.modelis} + ', ' + ${car.turis} + 'L, ' + ${car.maxGreitis} + ' km/h'"
-        ></span>
-      </li>
-    </ul>
-    <a href="/cars/average-volume">Apskaičiuoti vidutinį tūrį</a>
-    <a href="/cars/search">Mašinų paieška</a>
+    <div class="main">
+      <h2>Mašinų sarašas:</h2>
+      <ul>
+        <li th:each="car : ${cars}">
+          <span
+            th:text="${car.marke} + ' ' + ${car.modelis} + ', ' + ${car.turis} + 'L, ' + ${car.maxGreitis} + ' km/h'"
+          ></span>
+        </li>
+      </ul>
+        <div class="buttons">
+          <a href="/masinos/vidutinis-turis">Apskaičiuoti vidutinį tūrį</a>
+          <a href="/masinos/paieska">Mašinų paieška</a>
+        </div>
+    </div>
   </body>
 </html>
