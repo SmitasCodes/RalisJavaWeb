@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mašinos išrikiuotos</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h2>Mašinos išrikiuotos pagal greitį</h2>
+      <ol>
+        <li th:each="car : ${carsSortedBySpeed}">
+          <span
+            th:text="${car.marke} + ' ' + ${car.modelis} + ', ' + ${car.turis} + 'L, ' + ${car.maxGreitis} + ' km/h'"
+          ></span>
+        </li>
+      </ol>
+      <div class="buttons">
+        <a href="/masinos">Grižti į pagrindinį</a>
+      </div>
+    </div>
+  </body>
+</html>

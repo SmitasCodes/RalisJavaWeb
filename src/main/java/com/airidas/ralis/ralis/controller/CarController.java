@@ -43,4 +43,11 @@ public class CarController {
         modelAttr.addAttribute("cars", results);
         return "car-list";
     }
+
+    @GetMapping("/isrikiavimas-pagal-greiti")
+    public String getAllCarsRankedBySpeed(Model model) {
+        List<Masina> rankedCars = carService.getCarsRankedBySpeed();
+        model.addAttribute("carsSortedBySpeed", rankedCars);
+        return "car-list-sorted-speed";
+    }
 }

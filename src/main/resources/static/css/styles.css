@@ -51,8 +51,8 @@ ul li {
 .buttons a {
   text-decoration: none;
   display: inline-block;
-  padding: 4px 6px;
-  border-radius: 10px;
+  padding: 6px 12px;
+  border-radius: 50px;
   background-color: #32cd32;
   font-size: 0.9em;
 }
@@ -78,4 +78,12 @@ ul li {
 .input-div input {
   width: 95px;
   float: right;
+}
+
+ol {
+  padding: 10px;
+  background-color: #3dd4da;
+  display: inline-block;
+  border-radius: 12px;
+  list-style-position: inside;
 }
